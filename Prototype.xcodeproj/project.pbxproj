@@ -14,6 +14,7 @@
 		7AB839FF280AC37100465C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB839FE280AC37100465C1E /* Assets.xcassets */; };
 		7AB83A02280AC37100465C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB83A00280AC37100465C1E /* LaunchScreen.storyboard */; };
 		7AB83A09280AC47D00465C1E /* doraemon_bye_arkit.dae in Resources */ = {isa = PBXBuildFile; fileRef = 7AB83A08280AC47D00465C1E /* doraemon_bye_arkit.dae */; };
+		7AB83A0B280AC88C00465C1E /* bunny.ply in Resources */ = {isa = PBXBuildFile; fileRef = 7AB83A0A280AC88C00465C1E /* bunny.ply */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7AB839FE280AC37100465C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AB83A01280AC37100465C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AB83A08280AC47D00465C1E /* doraemon_bye_arkit.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = doraemon_bye_arkit.dae; sourceTree = "<group>"; };
+		7AB83A0A280AC88C00465C1E /* bunny.ply */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bunny.ply; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				7AB839FE280AC37100465C1E /* Assets.xcassets */,
 				7AB83A00280AC37100465C1E /* LaunchScreen.storyboard */,
 				7AB83A08280AC47D00465C1E /* doraemon_bye_arkit.dae */,
+				7AB83A0A280AC88C00465C1E /* bunny.ply */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			files = (
 				7AB839F8280AC37000465C1E /* art.scnassets in Resources */,
 				7AB83A02280AC37100465C1E /* LaunchScreen.storyboard in Resources */,
+				7AB83A0B280AC88C00465C1E /* bunny.ply in Resources */,
 				7AB839FF280AC37100465C1E /* Assets.xcassets in Resources */,
 				7AB839FD280AC37000465C1E /* Main.storyboard in Resources */,
 				7AB83A09280AC47D00465C1E /* doraemon_bye_arkit.dae in Resources */,
