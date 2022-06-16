@@ -11,40 +11,61 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
-    @IBOutlet var sceneView: SCNView!
+    @IBOutlet var sceneView: ARSCNView!
     
+    private var newAngleX :Float = 0.0
     private var newAngleY :Float = 0.0
+    private var newAngleZ :Float = 0.0
+    private var currentAngleX :Float = 0.0
     private var currentAngleY :Float = 0.0
+    private var currentAngleZ :Float = 0.0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
+        
         let scene = SCNScene(named: "doraemon")!
         
+//        let scene = SCNScene()
+        
+        // Set the scene to the view
+        sceneView.scene = scene
         // Set background color
         sceneView.backgroundColor = UIColor.darkGray
         
+        /*
+        // Make some cubes
+        let cube = SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0)
+        let cubeNode = SCNNode(geometry: cube)
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor.white
+        
+        cubeNode.name = "cube"
+        cubeNode.geometry?.materials = [material]
+        cubeNode.position = SCNVector3(0, 0, 0)
+                    
+        self.sceneView.scene.rootNode.addChildNode(cubeNode)
+        
+        guard let camera = sceneView.pointOfView else {
+            return
+        }
+        camera.position = SCNVector3(0, 0, 2)
+        */
+
+
         guard let Node = scene.rootNode.childNode(withName: "parentNode", recursively: true) else {
             return
         }
-        
         guard let camera = sceneView.pointOfView else {
             return
         }
         let cameraPos = SCNVector3Make(0, 0, -0.5)
         let position = camera.convertPosition(cameraPos, to: nil)
-        
         Node.position = position
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+
         
         // Allow user to manipulate camera
         sceneView.allowsCameraControl = true
@@ -81,10 +102,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if let hitTest = hitTestResults.first {
                 
                 if let parentNode = hitTest.node.parent {
+                    /*
+                    let div = currentAngleY.truncatingRemainder(dividingBy: 6.0)
+                    if (div <= 1.5 && div >= 4.5) {
+                        self.newAngleX = Float(translation.y) * (Float) (Double.pi)/360
+                        self.newAngleX += self.currentAngleX
+                        parentNode.eulerAngles.x = self.newAngleX
+                    } else {
+                        self.newAngleX = Float(translation.y) * (Float) (Double.pi)/360
+                        self.newAngleX += self.currentAngleX
+                        parentNode.eulerAngles.x = self.newAngleX
+                    }
                     
-                    self.newAngleY = Float(translation.x) * (Float) (Double.pi)/270
+                    self.newAngleY = Float(translation.x) * (Float) (Double.pi)/360
                     self.newAngleY += self.currentAngleY
                     parentNode.eulerAngles.y = self.newAngleY
+
+                    */
+                    self.newAngleX = Float(translation.y) * (Float) (Double.pi)/360
+                    self.newAngleX += self.currentAngleX
+                    parentNode.eulerAngles.x = self.newAngleX
+                    
+                    self.newAngleY = Float(translation.x) * (Float) (Double.pi)/360
+                    self.newAngleY += self.currentAngleY
+                    parentNode.eulerAngles.y = self.newAngleY
+
+                    self.newAngleZ = Float(translation.x) * (Float) (Double.pi)/360
+                    self.newAngleZ += self.currentAngleZ
+                    parentNode.eulerAngles.z = self.newAngleZ
                     
                 }
                 
@@ -92,7 +137,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
         }
         else if recognizer.state == .ended {
+            self.currentAngleX = self.newAngleX
             self.currentAngleY = self.newAngleY
+            self.currentAngleZ = self.newAngleZ
+            print(self.currentAngleX)
         }
     }
     
