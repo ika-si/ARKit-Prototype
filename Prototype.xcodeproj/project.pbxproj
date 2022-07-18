@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A7A4A52288523FA00CA6B86 /* MyShadersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7A4A51288523FA00CA6B86 /* MyShadersScene.swift */; };
+		7A7A4A582885319300CA6B86 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A7A4A572885319300CA6B86 /* Shaders.metal */; };
+		7A7A4A5C28853A3500CA6B86 /* catSample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7A7A4A5B28853A3500CA6B86 /* catSample.jpeg */; };
 		7A7CE00E2836869800AD520E /* doraemon.dae in Resources */ = {isa = PBXBuildFile; fileRef = 7A7CE00D2836869800AD520E /* doraemon.dae */; };
 		7AB839F6280AC37000465C1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB839F5280AC37000465C1E /* AppDelegate.swift */; };
 		7AB839F8280AC37000465C1E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB839F7280AC37000465C1E /* art.scnassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A7A4A51288523FA00CA6B86 /* MyShadersScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShadersScene.swift; sourceTree = "<group>"; };
+		7A7A4A572885319300CA6B86 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		7A7A4A5B28853A3500CA6B86 /* catSample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = catSample.jpeg; sourceTree = "<group>"; };
 		7A7CE00D2836869800AD520E /* doraemon.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = doraemon.dae; path = ../../../Desktop/doraemon.dae; sourceTree = "<group>"; };
 		7AB839F2280AC37000465C1E /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB839F5280AC37000465C1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,11 +68,14 @@
 				7AB839F5280AC37000465C1E /* AppDelegate.swift */,
 				7AB839F7280AC37000465C1E /* art.scnassets */,
 				7AB839F9280AC37000465C1E /* ViewController.swift */,
+				7A7A4A51288523FA00CA6B86 /* MyShadersScene.swift */,
 				7AB839FB280AC37000465C1E /* Main.storyboard */,
 				7AB839FE280AC37100465C1E /* Assets.xcassets */,
 				7AB83A00280AC37100465C1E /* LaunchScreen.storyboard */,
+				7A7A4A572885319300CA6B86 /* Shaders.metal */,
 				7AB83A0A280AC88C00465C1E /* bunny.ply */,
 				7A7CE00D2836869800AD520E /* doraemon.dae */,
+				7A7A4A5B28853A3500CA6B86 /* catSample.jpeg */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 				7AB839F8280AC37000465C1E /* art.scnassets in Resources */,
 				7AB83A02280AC37100465C1E /* LaunchScreen.storyboard in Resources */,
 				7AB83A0B280AC88C00465C1E /* bunny.ply in Resources */,
+				7A7A4A5C28853A3500CA6B86 /* catSample.jpeg in Resources */,
 				7AB839FF280AC37100465C1E /* Assets.xcassets in Resources */,
 				7AB839FD280AC37000465C1E /* Main.storyboard in Resources */,
 			);
@@ -145,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7A4A582885319300CA6B86 /* Shaders.metal in Sources */,
 				7AB839FA280AC37000465C1E /* ViewController.swift in Sources */,
+				7A7A4A52288523FA00CA6B86 /* MyShadersScene.swift in Sources */,
 				7AB839F6280AC37000465C1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -276,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -303,7 +315,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +346,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
